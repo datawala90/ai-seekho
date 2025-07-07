@@ -1,0 +1,53 @@
+sagemaker-user@default:~/ai-seekho$ git checkout -b main
+fatal: A branch named 'main' already exists.
+sagemaker-user@default:~/ai-seekho$ git add *.ipynb
+
+sagemaker-user@default:~/ai-seekho$ ls -ltr
+total 28
+-rw-r--r-- 1 sagemaker-user users 9869 Jul  5 14:24 2-easy-rag.ipynb
+-rw-r--r-- 1 sagemaker-user users 3208 Jul  5 14:38 1-br-call.ipynb
+-rw-r--r-- 1 sagemaker-user users 8195 Jul  7 00:37 3-br-rag.ipynb
+
+
+sagemaker-user@default:~/ai-seekho$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 5.92 KiB | 5.92 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:datawala90/ai-seekho.git
+ * [new branch]      main -> main
+
+sagemaker-user@default:~/ai-seekho$ ls -ltr
+total 28
+-rw-r--r-- 1 sagemaker-user users 9869 Jul  5 14:24 2-easy-rag.ipynb
+-rw-r--r-- 1 sagemaker-user users 3208 Jul  5 14:38 1-br-call.ipynb
+-rw-r--r-- 1 sagemaker-user users 8195 Jul  7 00:37 3-br-rag.ipynb
+
+sagemaker-user@default:~/ai-seekho$ git pull origin main
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (5/5), 1.28 KiB | 1.28 MiB/s, done.
+From github.com:datawala90/ai-seekho
+ * branch            main       -> FETCH_HEAD
+   d5c4473..de6c32b  main       -> origin/main
+Updating d5c4473..de6c32b
+Fast-forward
+ README.md   | 3 +++
+ hello_ai.py | 9 +++++++++
+ 2 files changed, 12 insertions(+)
+ create mode 100644 hello_ai.py
+sagemaker-user@default:~/ai-seekho$ ls -ltr
+total 36
+-rw-r--r-- 1 sagemaker-user users 9869 Jul  5 14:24 2-easy-rag.ipynb
+-rw-r--r-- 1 sagemaker-user users 3208 Jul  5 14:38 1-br-call.ipynb
+-rw-r--r-- 1 sagemaker-user users 8195 Jul  7 00:37 3-br-rag.ipynb
+-rw-r--r-- 1 sagemaker-user users  131 Jul  7 01:20 hello_ai.py
+-rw-r--r-- 1 sagemaker-user users 1771 Jul  7 01:20 README.md
+
+sagemaker-user@default:~/ai-seekho$ python hello_ai.py
+Hello, AI!
