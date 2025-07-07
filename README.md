@@ -39,3 +39,6 @@ Implements a RAG workflow using Amazon Bedrock for both embedding and text gener
 
 Notebook `2-easy-rag.ipynb` can be run entirely offline, while `1-br-call.ipynb` and `3-br-rag.ipynb` need network access to AWS services and valid credentials.
 
+
+### 4. `hello_ai.py`
+A simple script that prints a greeting. Run it with `python hello_ai.py`.
